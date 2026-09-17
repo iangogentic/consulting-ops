@@ -56,8 +56,14 @@ IN FLIGHT / NEXT (do these in order):
        Queue now: 8 pending sends for Ian to review/approve.
 11.[ ] NEEDS IAN: create outreach1@gogentic.com inbox (Workspace) + SMTP creds
        → then approve items → send_worker --apply does first real sends
-12.[ ] Next: enrich leads w/ contact emails (prospecting scraper phase 1),
-       Upwork monitor spec, voice bot phase 1, Codex hero imagery
+12.[x] enrich_worker built + run: scrapes lead websites (cached, paced 2s),
+       Cloudflare-email decode, role-address preference → 10/18 leads now
+       `qualified` with real contact emails (12 contact rows, junk purged).
+       Digital Success needs manual hunt (JS-rendered site) — noted.
+13.[x] Upwork monitor spec written (docs/SPEC-UPWORK-MONITOR.md): search
+       poll → keyword score → draft bid → Ian approves (no auto-submit, TOS).
+14.[ ] Next: upwork search_worker impl, voice bot phase 1, Codex hero imagery,
+       custom domain when Ian grants access, second site variant
 
 HOUSEKEEPING DONE: test lead + its 2 test approvals (ids 1-2) purged from DB.
 
