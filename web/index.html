@@ -24,40 +24,37 @@
 
 <div class="wrap">
 
-<!-- HERO -->
+<!-- HERO: product-as-hero. Left: kinetic headline. Right: live AI receptionist transcript. -->
 <div class="hero">
   <div class="hero-grid">
     <div>
       <div class="label" style="margin-bottom:28px">AI implementation studio · Dallas</div>
-      <h1>Your agency sells AI.<br>We're the team that <em>builds it.</em></h1>
-    </div>
-    <div class="hero-side">
-      <p>White-label AI receptionists, booking agents, and custom workflows —
-      delivered under your brand at wholesale rates built for 2–3× markup.
-      No hiring. No ramp. First project is a paid pilot.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="contact.html">Book a 20-min demo</a>
-        <a class="btn btn-ghost" href="ratecard.html">See the rate card</a>
+      <h1>Your agency sells AI.<br>We build the part that <span class="kinetic"><span class="k-word" data-words='["answers.","books.","follows up.","never sleeps."]'>answers.</span></span></h1>
+      <div class="hero-side" style="margin-top:32px;padding-bottom:0">
+        <p>White-label AI receptionists, booking agents, and custom workflows —
+        delivered under your brand at wholesale rates built for 2–3× markup.
+        No hiring. No ramp. First project is a paid pilot.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="contact.html">Book a 20-min demo</a>
+          <a class="btn btn-ghost" href="ratecard.html">See the rate card</a>
+        </div>
       </div>
+    </div>
+    <div>
+      <div class="live" id="livePanel" aria-label="Simulated live call transcript">
+        <div class="live-head"><span class="live-dot"></span> Live — incoming call, 9:42pm</div>
+        <div class="live-lines" id="liveLines"></div>
+        <div class="live-foot"><span>Sunday · after hours</span><span class="ok">✓ booked → calendar</span></div>
+      </div>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);margin-top:12px;letter-spacing:.04em">SIMULATED TRANSCRIPT — YOUR AGENT SOUNDS THIS GOOD AT 2AM</p>
     </div>
   </div>
 </div>
 
-<!-- PROOF -->
-<div class="proof">
-  <div class="proof-grid">
-    <div class="proof-cell">
-      <div class="num">$150–250K</div>
-      <p>Yearly cost of the in-house AI engineer you don't need to hire.</p>
-    </div>
-    <div class="proof-cell">
-      <div class="num">2 weeks</div>
-      <p>Typical time from scope to a live AI receptionist answering calls.</p>
-    </div>
-    <div class="proof-cell">
-      <div class="num">2–3×</div>
-      <p>The markup our partners take on every project. We stay invisible.</p>
-    </div>
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mtrack">
+    <span>White-label always</span><span>Your brand, our production</span><span>Fixed scope, fixed price</span><span>Paid pilot first</span><span>2–3× markup for partners</span><span>Dallas, TX</span>
   </div>
 </div>
 
@@ -133,6 +130,40 @@
   </section>
 </div>
 
+<!-- STATEMENT -->
+<div class="statement">
+  <div class="reveal">
+    <div class="label" style="margin-bottom:24px">Why partners switch to us</div>
+    <p class="display">An in-house AI engineer costs <em>$150–250K</em> a year and
+    six months of ramp. Us: two weeks, fixed price, and the systems are already
+    running our own company.</p>
+  </div>
+</div>
+
+<!-- DUO: proof panels -->
+<section style="padding-top:0">
+  <div class="duo">
+    <div class="duo-panel reveal">
+      <h3>Live in two weeks</h3>
+      <p>Scope Monday. Your client's AI receptionist is answering real calls by the
+      end of week two — trained on their services, hours, and calendar, with
+      recordings and a monthly quality report.</p>
+      <div class="duo-metric">
+        <div class="n">2 wks</div>
+        <div class="d">scope → live calls, typical engagement</div>
+      </div>
+    </div>
+    <div class="duo-panel reveal">
+      <h3>Margins that hold</h3>
+      <p>Wholesale in, 2–3× retail out — setup and every monthly retainer.</p>
+      <div class="duo-metric">
+        <div class="n">2–3×</div>
+        <div class="d">partner markup on every line</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 02 HOW -->
 <section>
   <div class="sec-head">
@@ -204,6 +235,74 @@
   <div>ian@gogentic.com</div>
   <div>Ian Greenberg · AI Researcher, SMU</div>
 </div></footer>
+
+<script>
+/* kinetic headline */
+(function(){
+  const el = document.querySelector('.k-word');
+  if(!el) return;
+  const words = JSON.parse(el.dataset.words);
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % words.length;
+    setTimeout(() => { el.textContent = words[i]; }, 500);
+  }, 3200);
+})();
+
+/* live transcript */
+(function(){
+  const lines = [
+    {who:'caller',  html:'"Hi — I know you\'re closed, but I cracked a tooth. How bad is the wait to get seen?"'},
+    {who:'agent',   html:'"I\'m sorry that sounds painful. Dr. Chen has an opening <b>tomorrow at 8:20am</b> — I can hold it for you right now. Is morning best?"'},
+    {who:'caller',  html:'"Morning works. And do you take Delta Dental?"'},
+    {who:'agent',   html:'"We do — you\'re all set for <b>8:20am tomorrow</b>. I\'ve texted the confirmation and your new-patient forms to this number. Feel better soon!"'}
+  ];
+  const box = document.getElementById('liveLines');
+  if(!box) return;
+  let t = 900;
+  lines.forEach(l => {
+    setTimeout(() => {
+      const d = document.createElement('div');
+      d.className = 'live-line ' + l.who;
+      d.innerHTML = `<span class="who">${l.who === 'agent' ? 'agent · your brand' : 'caller'}</span>${l.html}`;
+      box.appendChild(d);
+      requestAnimationFrame(() => d.classList.add('show'));
+    }, t);
+    t += 1700;
+  });
+  /* loop the whole scene every 14s */
+  setInterval(() => {
+    box.innerHTML = '';
+    let t2 = 600;
+    lines.forEach(l => {
+      setTimeout(() => {
+        const d = document.createElement('div');
+        d.className = 'live-line ' + l.who;
+        d.innerHTML = `<span class="who">${l.who === 'agent' ? 'agent · your brand' : 'caller'}</span>${l.html}`;
+        box.appendChild(d);
+        requestAnimationFrame(() => d.classList.add('show'));
+      }, t2);
+      t2 += 1700;
+    });
+  }, 14000);
+})();
+
+/* marquee: duplicate track content for seamless loop */
+(function(){
+  const track = document.getElementById('mtrack');
+  if(track) track.innerHTML += track.innerHTML;
+})();
+
+/* scroll reveals */
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window) || !els.length) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  els.forEach(e => io.observe(e));
+})();
+</script>
 
 </body>
 </html>
