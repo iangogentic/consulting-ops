@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS sends (
 
 CREATE TABLE IF NOT EXISTS replies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    send_id INTEGER NOT NULL REFERENCES sends(id),
+    send_id INTEGER NOT NULL DEFAULT 0,          -- 0 = reply preceded any recorded send
     lead_id INTEGER REFERENCES leads(id),
     received_at REAL NOT NULL,
     classification TEXT,                         -- positive|question|objection|noise

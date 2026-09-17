@@ -48,6 +48,28 @@ def set_status(conn: sqlite3.Connection, lead_id: int, status: str) -> None:
     conn.commit()
 
 
+def record_reply(conn: sqlite3.Connection, *, lead_id: int, classification: str,
+                 from_addr: str, subject: str, raw: str = "") -> int:
+    """Record an inbound reply and move the lead. classified by reply_worker."""
+    if classification not in {"positive", "negative", "ooo", "unclassified"}:
+        raise OpError(f"bad classification {classification}")
+    send = conn.execute(
+        "SELECT id FROM sends WHERE lead_id=? ORDER BY id DESC LIMIT 1",
+        (lead_id,)).fetchone()
+    summary = f"{from_addr}: {subject}"[:240]
+    cur = conn.execute(
+        "INSERT INTO replies (send_id, lead_id, received_at, classification, summary, raw_path, handled)"
+        " VALUES (?,?,?,?,?,?,0)",
+        (send["id"] if send else 0, lead_id, time.time(), classification, summary,
+         raw or None))
+    status_map = {"positive": "replied", "negative": "dead",
+                  "ooo": "contacted", "unclassified": "replied"}
+    conn.execute("UPDATE leads SET status=?, updated_at=? WHERE id=?",
+                 (status_map[classification], time.time(), lead_id))
+    conn.commit()
+    return cur.lastrowid
+
+
 def pipeline_status(conn: sqlite3.Connection) -> dict:
     by_status = dict(
         conn.execute("SELECT status, COUNT(*) FROM leads GROUP BY status").fetchall()
