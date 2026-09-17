@@ -1,0 +1,9 @@
+[project]
+name = "consulting-ops"
+version = "0.1.0"
+description = "GoGentic consulting operations: SQLite CRM + thin MCP + guarded send lane"
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
