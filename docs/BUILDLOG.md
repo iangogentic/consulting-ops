@@ -44,11 +44,20 @@ IN FLIGHT / NEXT (do these in order):
 6. [x] First outreach batch drafted: leads 2 (Digital Success), 3 (Habanero),
        13 (Dental Growth Ops) → approvals 3/4/5 queued via request-send.
        Ian reviews: `python tools/ops.py approve-list` then `approve-decide --id N --yes`
-7. [ ] BEFORE any real send: set up outreach1@gogentic.com inbox (or Ian's choice
-       of sending inbox); no send worker exists yet — first sends are manual
-8. [ ] Then: prospect scraper worker (RUNBOOK-PROSPECTING), Upwork monitor spec,
-       voice bot phase 1 (SPEC-VOICE-BOT), Codex image-gen hero visuals,
-       custom domain attach, more variants/landing pages
+8. [x] reply_worker built: IMAP poll → keyword classifier (positive/negative/ooo/
+       unclassified, 5/5 unit cases) → record_reply → lead status moves. Needs
+       OUTREACH_IMAP_HOST_<LANE>/USER/PASS env to run against a real inbox.
+       record_reply e2e verified in DB. replies.send_id now 0-safe (no FK).
+9. [x] send_worker built: executes APPROVED queue items over SMTP (Workspace).
+       Full guard chain verified: OUTREACH_STOP halts, record-before-delivery,
+       mark_failed refunds daily counter, lead stop flag respected, contact-
+       table email resolution. Dry-run + --apply modes. 13/13 tests pass.
+10.[x] Outreach batch 2: leads 8,9,10,11,12 drafted + queued (approvals 11-15).
+       Queue now: 8 pending sends for Ian to review/approve.
+11.[ ] NEEDS IAN: create outreach1@gogentic.com inbox (Workspace) + SMTP creds
+       → then approve items → send_worker --apply does first real sends
+12.[ ] Next: enrich leads w/ contact emails (prospecting scraper phase 1),
+       Upwork monitor spec, voice bot phase 1, Codex hero imagery
 
 HOUSEKEEPING DONE: test lead + its 2 test approvals (ids 1-2) purged from DB.
 
