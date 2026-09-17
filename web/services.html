@@ -3,47 +3,133 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — GoGentic</title>
-<meta name="description" content="White-label AI implementation services: AI receptionists, booking automation, custom agent workflows, and agent-ready business packages.">
-<style>
-:root{--ink:#0e1420;--accent:#2b6cf6;--muted:#5b6b7f;--card:#f4f7fb}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:ui-sans-serif,system-ui,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.6}
-.wrap{max-width:900px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid #e8edf3}.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:20px}.logo span{color:var(--accent)}
-nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:15px}
-.cta{background:var(--accent);color:#fff!important;padding:9px 18px;border-radius:8px;font-weight:600}
-h1{font-size:36px;letter-spacing:-1px;padding:56px 0 8px}
-.sub{color:var(--muted);font-size:18px;margin-bottom:40px}
-.svc{background:var(--card);border-radius:14px;padding:28px;margin-bottom:18px}
-.svc h2{font-size:20px}.svc p{color:var(--muted);font-size:15px;margin-top:8px}
-.svc .meta{margin-top:12px;font-weight:700;color:var(--accent);font-size:14px}
-footer{border-top:1px solid #e8edf3;padding:28px 0;color:var(--muted);font-size:14px;margin-top:40px}
-</style></head><body>
-<header><div class="wrap nav"><div class="logo">Go<span>Gentic</span></div>
-<nav><a href="index.html">Home</a><a href="ratecard.html">Rate Card</a><a href="about.html">About</a><a class="cta" href="contact.html">Book a Call</a></nav></div></header>
+<meta name="description" content="White-label AI implementation services: AI receptionists, booking automation, custom agent workflows, and agent-ready packages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+
+<header><div class="nav">
+  <a class="logo" href="index.html">Go<em>gentic</em></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ratecard.html">Rate Card</a>
+    <a href="about.html">Studio</a>
+    <a class="pill" href="contact.html">Start a pilot</a>
+  </nav>
+</div></header>
+
 <div class="wrap">
-<h1>Services</h1>
-<p class="sub">Every service is delivered white-label: your brand, our production. Fixed scope, fixed price, defined timeline.</p>
 
-<div class="svc"><h2>AI Receptionist & Booking — Setup ($1,500 W / $4,000 R)</h2>
-<p>24/7 voice agent answering calls, booking appointments, and capturing missed-call leads. Trained on the business's services, hours, pricing FAQs, and calendar. Includes Twilio number, call recordings, and a monthly call-quality report. Live in 2 weeks.</p>
-<div class="meta">Best for: salons, clinics, med-spas, home services — any call-dependent business</div></div>
-
-<div class="svc"><h2>AI Receptionist — Managed ($400/mo W / $1,000/mo R)</h2>
-<p>Ongoing monitoring, prompt tuning, new scenario training, and monthly reporting. Changes included — when the business updates hours or services, the agent updates.</p><div class="meta">Recurring · renews monthly</div></div>
-
-<div class="svc"><h2>Custom Agent Workflow ($2,500 W / $6,000 R)</h2>
-<p>One automated workflow end-to-end: lead intake, follow-up sequences, review responses, report generation, or document processing. Scoped in writing before we start. 1-3 weeks.</p><div class="meta">Fixed scope, fixed price</div></div>
-
-<div class="svc"><h2>Agent-Ready Business Package ($4,000 W / $12,000 R)</h2>
-<p>The full foundation: integrations across the client's CRM/calendar/phone, scoped credentials, audit trails, and one live agent workflow. Everything they later "hire AI to do" runs on this rail.</p><div class="meta">The flagship — sells as "your AI employee's workplace"</div></div>
-
-<div class="svc"><h2>AI Operations Retainer ($1,000/mo W / $2,500/mo R)</h2>
-<p>Maintenance, tuning, one new automation per month, priority support. The recurring line that compounds an agency's MRR.</p><div class="meta">Recurring · pairs with any setup</div></div>
-
-<div class="svc"><h2>Paid Pilot ($1,000 W / $2,000 R)</h2>
-<p>One small fixed-scope build to vet our delivery. 50% upfront / 50% on delivery. Credited 1:1 toward a full project signed within 30 days.</p><div class="meta">The no-brainer first project</div></div>
+<div class="page-hero">
+  <div class="label" style="margin-bottom:24px">Services</div>
+  <h1>Fixed scope. Fixed price. <em>Your brand on everything.</em></h1>
+  <p class="lede">Every service is delivered white-label: you sell it, we build it,
+  your client never sees our name. W = your wholesale cost · R = what partners
+  typically charge their clients.</p>
 </div>
-<footer>© 2026 GoGentic · Dallas, TX · Ian Greenberg, AI Researcher (SMU)</footer>
+
+<section>
+  <div class="svc-row">
+    <div class="svc-num">/01</div>
+    <div class="svc-body">
+      <h3>AI Receptionist &amp; Booking — Setup</h3>
+      <p>A voice agent that answers every call 24/7, books appointments, and captures
+      missed-call leads. Trained on the business's services, hours, pricing FAQs, and
+      calendar. Includes phone number, call recordings, and a monthly call-quality
+      report. Live in two weeks.</p>
+      <p style="margin-top:10px"><b>Best for:</b> salons, clinics, med-spas, home
+      services — any business whose revenue lives on the phone.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$1,500</div>
+      <div class="r">W · resell ≈ $4,000 R</div>
+    </div>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/02</div>
+    <div class="svc-body">
+      <h3>AI Receptionist — Managed</h3>
+      <p>Ongoing monitoring, prompt tuning, and new-scenario training with monthly
+      reporting. When the business changes hours or services, the agent changes too —
+      included, not billed.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$400<span style="font-size:17px">/mo</span></div>
+      <div class="r">W · resell ≈ $1,000/mo R</div>
+      <div class="r">recurring</div>
+    </div>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/03</div>
+    <div class="svc-body">
+      <h3>Custom Agent Workflow</h3>
+      <p>One automated workflow end-to-end: lead intake, follow-up sequences, review
+      responses, report generation, or document processing. Scoped in writing before
+      we start. Delivered in one to three weeks.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$2,500</div>
+      <div class="r">W · resell ≈ $6,000 R</div>
+      <div class="r">fixed scope</div>
+    </div>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/04</div>
+    <div class="svc-body">
+      <h3>The Agent-Ready Package</h3>
+      <p>The full foundation: integrations across the client's CRM, calendar, and
+      phone; scoped credentials; audit trails; one live agent workflow. Everything
+      they later "hire AI to do" runs on this rail. Sell it as
+      <i>your AI employee's workplace.</i></p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$4,000</div>
+      <div class="r">W · resell ≈ $12,000 R</div>
+      <div class="r">flagship</div>
+    </div>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/05</div>
+    <div class="svc-body">
+      <h3>AI Operations Retainer</h3>
+      <p>Maintenance, tuning, one new automation per month, priority support. The
+      recurring line that compounds an agency's MRR — pairs with any setup above.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$1,000<span style="font-size:17px">/mo</span></div>
+      <div class="r">W · resell ≈ $2,500/mo R</div>
+      <div class="r">recurring</div>
+    </div>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/06</div>
+    <div class="svc-body">
+      <h3>Paid Pilot</h3>
+      <p>One small fixed-scope build to vet our delivery before committing. 50%
+      upfront, 50% on delivery, credited 1:1 toward a full project signed within
+      30 days.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$1,000</div>
+      <div class="r">W · resell ≈ $2,000 R</div>
+      <div class="r">the first move</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 GoGentic · Dallas, TX</div>
+  <div>ian@gogentic.com</div>
+  <div>Ian Greenberg · AI Researcher, SMU</div>
+</div></footer>
+
 </body></html>

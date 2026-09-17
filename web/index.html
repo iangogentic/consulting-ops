@@ -3,111 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GoGentic — AI Receptionist & Booking Systems for Agencies</title>
-<meta name="description" content="White-label AI implementation for agencies. AI receptionists, booking automation, and custom agent workflows under your brand. Built by an AI researcher, priced for 2-3x markup.">
-<style>
-:root{--ink:#0e1420;--paper:#ffffff;--accent:#2b6cf6;--accent2:#0e9f6e;--muted:#5b6b7f;--card:#f4f7fb}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid #e8edf3;position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:20px;letter-spacing:-.5px}
-.logo span{color:var(--accent)}
-nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:15px}
-nav a:hover{color:var(--ink)}
-.cta{background:var(--accent);color:#fff!important;padding:9px 18px;border-radius:8px;font-weight:600}
-.hero{padding:80px 0 56px;max-width:800px}
-.hero h1{font-size:44px;line-height:1.15;letter-spacing:-1.5px;font-weight:800}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero p{font-size:19px;color:var(--muted);margin-top:20px;max-width:640px}
-.buttons{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{padding:13px 26px;border-radius:10px;font-weight:700;text-decoration:none;font-size:16px}
-.btn.primary{background:var(--accent);color:#fff}
-.btn.ghost{border:1.5px solid #d7e0ea;color:var(--ink)}
-.proof{margin-top:40px;display:flex;gap:28px;flex-wrap:wrap;color:var(--muted);font-size:14px}
-.proof b{color:var(--ink)}
-section{padding:64px 0}
-h2{font-size:30px;letter-spacing:-.5px;margin-bottom:8px}
-.sub{color:var(--muted);margin-bottom:36px;max-width:640px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.card{background:var(--card);border-radius:14px;padding:28px}
-.card h3{font-size:18px;margin-bottom:10px}
-.card p{color:var(--muted);font-size:15px}
-.card .price{margin-top:14px;font-weight:800;color:var(--accent)}
-.band{background:var(--ink);color:#fff;border-radius:20px;padding:48px;margin:24px 0}
-.band h2{color:#fff}
-.band p{color:#b9c4d2;max-width:640px}
-.band .btn{background:#fff;color:var(--ink);display:inline-block;margin-top:20px}
-.steps{counter-reset:s}
-.step{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid #e8edf3}
-.step:before{counter-increment:s;content:counter(s);flex:0 0 34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
-.step h3{font-size:17px}
-.step p{color:var(--muted);font-size:15px}
-footer{border-top:1px solid #e8edf3;padding:32px 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-</style>
+<title>GoGentic — The AI implementation studio for agencies</title>
+<meta name="description" content="White-label AI receptionists, booking agents, and custom AI workflows for agencies. Built by an AI researcher, delivered under your brand. Dallas, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div class="wrap nav">
-<div class="logo">Go<span>Gentic</span></div>
-<nav>
-<a href="services.html">Services</a>
-<a href="ratecard.html">Rate Card</a>
-<a href="about.html">About</a>
-<a class="cta" href="contact.html">Book a Call</a>
-</nav>
+
+<header><div class="nav">
+  <a class="logo" href="index.html">Go<em>gentic</em></a>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="ratecard.html">Rate Card</a>
+    <a href="about.html">Studio</a>
+    <a class="pill" href="contact.html">Start a pilot</a>
+  </nav>
 </div></header>
 
 <div class="wrap">
+
+<!-- HERO -->
 <div class="hero">
-<h1>Your agency sells AI services next month. <em>We build them.</em></h1>
-<p>White-label AI receptionists, booking automation, and custom agent workflows —
-delivered under <b>your brand</b>, at wholesale rates built for 2-3x markup.
-No hiring. No ramp-up. First project is a paid pilot.</p>
-<div class="buttons">
-<a class="btn primary" href="contact.html">See the rate card</a>
-<a class="btn ghost" href="services.html">What we deliver</a>
+  <div class="hero-grid">
+    <div>
+      <div class="label" style="margin-bottom:28px">AI implementation studio · Dallas</div>
+      <h1>Your agency sells AI.<br>We're the team that <em>builds it.</em></h1>
+    </div>
+    <div class="hero-side">
+      <p>White-label AI receptionists, booking agents, and custom workflows —
+      delivered under your brand at wholesale rates built for 2–3× markup.
+      No hiring. No ramp. First project is a paid pilot.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="contact.html">Book a 20-min demo</a>
+        <a class="btn btn-ghost" href="ratecard.html">See the rate card</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- PROOF -->
 <div class="proof">
-<div><b>$150-250K/yr</b> — cost of the AI hire you don't need</div>
-<div><b>2 weeks</b> — typical first delivery</div>
-<div><b>90%</b> — margins agencies report on AI retainers</div>
-</div>
+  <div class="proof-grid">
+    <div class="proof-cell">
+      <div class="num">$150–250K</div>
+      <p>Yearly cost of the in-house AI engineer you don't need to hire.</p>
+    </div>
+    <div class="proof-cell">
+      <div class="num">2 weeks</div>
+      <p>Typical time from scope to a live AI receptionist answering calls.</p>
+    </div>
+    <div class="proof-cell">
+      <div class="num">2–3×</div>
+      <p>The markup our partners take on every project. We stay invisible.</p>
+    </div>
+  </div>
 </div>
 
-<section>
-<h2>Built for agencies serving local services</h2>
-<p class="sub">Salons, clinics, med-spas, home services — businesses that live on
-phone calls and bookings. We've built and operated these exact systems on our own
-data: 128,000+ local business records and a working AI receptionist stack.</p>
-<div class="grid">
-<div class="card"><h3>AI Receptionist & Booking</h3><p>24/7 voice agent answers calls, books appointments, captures every missed-call lead. Trained on your client's services, hours, and calendar.</p><div class="price">$1,500 wholesale · resell ~$4,000</div></div>
-<div class="card"><h3>Custom Agent Workflows</h3><p>Intake, follow-up, review responses, reporting — one automated workflow end-to-end. Fixed scope, fixed price, live in 1-3 weeks.</p><div class="price">$2,500 wholesale · resell ~$6,000</div></div>
-<div class="card"><h3>Agent-Ready Package</h3><p>Make your client's whole stack AI-operable: integrations, scoped credentials, audit trail, one live workflow. The foundation for everything after.</p><div class="price">$4,000 wholesale · resell ~$12,000</div></div>
-</div>
+<!-- 01 SERVICES -->
+<section id="services">
+  <div class="sec-head">
+    <div>
+      <div class="label" style="margin-bottom:20px">01 — What we build</div>
+      <h2 class="display">Production AI, <em>not wrappers.</em></h2>
+    </div>
+    <p class="lede" style="max-width:38ch">The same systems we run on our own
+    operations daily. Every engagement is fixed-scope, fixed-price, white-label.</p>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/01</div>
+    <div class="svc-body">
+      <h3>AI Receptionist &amp; Booking</h3>
+      <p>A voice agent that answers every call 24/7, books appointments, and captures
+      missed-call leads — trained on your client's services, hours, and calendar.
+      Live in two weeks.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$1,500</div>
+      <div class="r">setup · resell ≈ $4,000</div>
+      <div class="r">$400/mo managed · resell ≈ $1,000</div>
+    </div>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/02</div>
+    <div class="svc-body">
+      <h3>Custom Agent Workflows</h3>
+      <p>One automated workflow end-to-end: intake, follow-up, review responses,
+      reporting, document processing. Scoped in writing before we start.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$2,500</div>
+      <div class="r">fixed scope · resell ≈ $6,000</div>
+    </div>
+  </div>
+
+  <div class="svc-row">
+    <div class="svc-num">/03</div>
+    <div class="svc-body">
+      <h3>The Agent-Ready Package</h3>
+      <p>Your client's whole stack made operable by AI: integrations, scoped
+      credentials, audit trails, one live workflow. The foundation everything
+      else they automate runs on.</p>
+    </div>
+    <div class="svc-price">
+      <div class="w">$4,000</div>
+      <div class="r">flagship · resell ≈ $12,000</div>
+    </div>
+  </div>
 </section>
 
+<!-- BAND: PILOT -->
 <div class="band">
-<h2>The pilot de-risks it</h2>
-<p>One small fixed-scope build, 50% upfront / 50% on delivery, credited 1:1 toward a
-full project if you sign within 30 days. You keep the client relationship and the
-markup; we stay invisible.</p>
-<a class="btn" href="contact.html">Start with a $1,000 pilot</a>
+  <section>
+    <div class="band-grid">
+      <div>
+        <div class="label" style="margin-bottom:20px">The pilot</div>
+        <h2 class="display">Bet $1,000,<br>not <em>your reputation.</em></h2>
+      </div>
+      <div>
+        <p>One small fixed-scope build. 50% upfront, 50% on delivery. Credited 1:1
+        toward a full project signed within 30 days. You keep the client, the brand,
+        and the margin — we stay invisible.</p>
+        <a class="btn btn-primary" href="contact.html" style="margin-top:28px">Start a pilot</a>
+      </div>
+    </div>
+  </section>
 </div>
 
-<section class="steps-wrap">
-<h2>How it works</h2>
-<div class="steps">
-<div class="step"><div><h3>Send us the client's pain</h3><p>You already know it — missed calls, slow follow-up, manual intake. We scope the build in 48 hours.</p></div></div>
-<div class="step"><div><h3>We build under your brand</h3><p>You brief us; we deliver working systems. Your logo, your reports, your client never sees us.</p></div></div>
-<div class="step"><div><h3>You invoice 2-3x</h3><p>Retainers renew monthly. We maintain, tune, and add automations — you keep the relationship.</p></div></div>
-</div>
+<!-- 02 HOW -->
+<section>
+  <div class="sec-head">
+    <div>
+      <div class="label" style="margin-bottom:20px">02 — How it works</div>
+      <h2 class="display">Three steps to an <em>AI line of business.</em></h2>
+    </div>
+  </div>
+  <div class="step">
+    <div class="s-num">i.</div>
+    <div>
+      <h3>Send us the pain</h3>
+      <p>You already know which client loses money to missed calls and slow follow-up.
+      We scope the build in writing within 48 hours — fixed price, fixed timeline.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="s-num">ii.</div>
+    <div>
+      <h3>We build under your brand</h3>
+      <p>You brief us; we ship working systems. Your logo on the reports, your name in
+      the deliverables. Your client never sees ours.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="s-num">iii.</div>
+    <div>
+      <h3>You invoice 2–3×</h3>
+      <p>Retainers renew monthly while we maintain, tune, and extend. You build the
+      relationship; we're the production engine behind it.</p>
+    </div>
+  </div>
 </section>
+
+<!-- 03 STUDIO -->
+<section style="border-top:1px solid var(--line)">
+  <div class="about-strip">
+    <div>
+      <div class="label" style="margin-bottom:20px">03 — The studio</div>
+      <h2 class="display">Run by an AI researcher.<br><em>Proven on ourselves.</em></h2>
+      <p class="lede" style="margin-top:24px;font-size:17px">GoGentic is operated by
+      Ian Greenberg, AI researcher at SMU. The agent systems we deploy for clients
+      run our own company daily — prospecting, outreach, scheduling. Nothing here
+      is slideware.</p>
+      <a class="btn btn-ghost" href="about.html" style="margin-top:28px">Meet the studio</a>
+    </div>
+    <div>
+      <div class="fact">
+        <div class="f-label">Operator</div>
+        <p>Ian Greenberg — AI researcher, Southern Methodist University, Dallas.</p>
+      </div>
+      <div class="fact">
+        <div class="f-label">Built &amp; operated</div>
+        <p>Autonomous browsing agents, voice agents, data pipelines over 128K+
+        business records, agent infrastructure in daily production use.</p>
+      </div>
+      <div class="fact">
+        <div class="f-label">Working style</div>
+        <p>Fixed scope. Fixed price. Paid pilot first. White-label always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </div>
 
-<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px">
-<div>© 2026 GoGentic · Dallas, TX</div>
-<div>Ian Greenberg · AI Researcher, SMU</div>
+<footer><div class="wrap foot">
+  <div>© 2026 GoGentic · Dallas, TX</div>
+  <div>ian@gogentic.com</div>
+  <div>Ian Greenberg · AI Researcher, SMU</div>
 </div></footer>
+
 </body>
 </html>

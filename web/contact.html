@@ -2,57 +2,77 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Call — GoGentic</title>
-<style>
-:root{--ink:#0e1420;--accent:#2b6cf6;--muted:#5b6b7f;--card:#f4f7fb}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:ui-sans-serif,system-ui,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.6}
-.wrap{max-width:760px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid #e8edf3}.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:20px}.logo span{color:var(--accent)}
-nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:15px}
-h1{font-size:36px;letter-spacing:-1px;padding:56px 0 8px}
-.sub{color:var(--muted);font-size:18px;margin-bottom:32px}
-.card{background:var(--card);border-radius:14px;padding:28px;margin-bottom:20px}
-.card h2{font-size:19px;margin-bottom:8px}
-.card p{color:var(--muted);font-size:15px}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:9px;font-weight:700;text-decoration:none;margin-top:14px}
-input,textarea{width:100%;padding:11px;border:1.5px solid #d7e0ea;border-radius:8px;font-size:15px;margin-bottom:12px;font-family:inherit}
-label{font-size:14px;font-weight:600;display:block;margin-bottom:5px}
-footer{border-top:1px solid #e8edf3;padding:28px 0;color:var(--muted);font-size:14px;margin-top:40px}
-</style></head><body>
-<header><div class="wrap nav"><div class="logo">Go<span>Gentic</span></div>
-<nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="ratecard.html">Rate Card</a><a class="cta" href="contact.html">Book a Call</a></nav></div></header>
+<title>Start a pilot — GoGentic</title>
+<meta name="description" content="Book a 20-minute demo call with GoGentic. Scope your first white-label AI pilot live on the call.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+
+<header><div class="nav">
+  <a class="logo" href="index.html">Go<em>gentic</em></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ratecard.html">Rate Card</a>
+    <a href="about.html">Studio</a>
+  </nav>
+</div></header>
+
 <div class="wrap">
-<h1>Let's talk</h1>
-<p class="sub">30 minutes, no pitch deck — we'll scope your first pilot live on the call.</p>
 
-<div class="card">
-<h2>Option 1: Book directly</h2>
-<p>Pick a slot on Ian's calendar. You'll leave with a scoped pilot proposal whether we work together or not.</p>
-<!-- Cal.com embed/link — replace BOOKING_URL when live -->
-<a class="btn" href="mailto:ian@gogentic.com?subject=Pilot%20call">Email to schedule: ian@gogentic.com</a>
+<div class="page-hero">
+  <div class="label" style="margin-bottom:24px">Start a pilot</div>
+  <h1>Twenty minutes. <em>A scoped pilot on the call.</em></h1>
+  <p class="lede">No pitch deck. Bring a client problem — missed calls, slow
+  follow-up, manual intake — and you'll leave with a fixed price and timeline,
+  whether we work together or not.</p>
 </div>
 
-<div class="card">
-<h2>Option 2: Send the brief</h2>
-<p>Tell us about your agency and the client problem. We reply within one business day with a scope and price.</p>
-<!-- Form endpoint: hook to CRM intake when deployed (Cloudflare Pages Functions or Formspree) -->
-<form id="brief" onsubmit="return mailtoFallback(event)">
-<label>Your name</label><input required name="name" placeholder="Jane Doe">
-<label>Agency</label><input required name="agency" placeholder="Acme Creative">
-<label>What's the client pain?</label><textarea required name="pain" rows="4" placeholder="Missed calls, slow follow-up, manual intake..."></textarea>
-<button class="btn" type="submit" style="border:none;cursor:pointer">Send brief</button>
-</form>
+<section>
+  <div class="c-grid">
+    <div class="c-card">
+      <h3>Book directly</h3>
+      <p>Pick a slot on Ian's calendar.</p>
+      <!-- Cal.com embed/link — replace when booking URL is live -->
+      <a class="btn btn-primary" href="mailto:ian@gogentic.com?subject=Pilot%20call%20—%20GoGentic">Email: ian@gogentic.com</a>
+      <p style="margin-top:16px;font-size:13.5px;color:var(--muted)">Replies within
+      one business day. Dallas time (CT).</p>
+    </div>
+
+    <div class="c-card">
+      <h3>Or send the brief</h3>
+      <p>Tell us about your agency and the client problem.</p>
+      <!-- Form endpoint: hook to CRM intake when deployed (Pages Functions / Formspree) -->
+      <form onsubmit="return mailtoFallback(event)">
+        <label>Your name</label>
+        <input required name="name" placeholder="Jane Doe" autocomplete="name">
+        <label>Agency</label>
+        <input required name="agency" placeholder="Acme Creative">
+        <label>The client pain</label>
+        <textarea required name="pain" rows="4" placeholder="Missed calls, slow follow-up, manual intake…"></textarea>
+        <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer;width:100%">Send the brief</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 </div>
-</div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 GoGentic · Dallas, TX</div>
+  <div>ian@gogentic.com</div>
+  <div>Ian Greenberg · AI Researcher, SMU</div>
+</div></footer>
+
 <script>
 function mailtoFallback(e){
   const f=e.target, d=new FormData(f);
   const body=encodeURIComponent(`Name: ${d.get('name')}\nAgency: ${d.get('agency')}\nPain: ${d.get('pain')}`);
-  location.href=`mailto:ian@gogentic.com?subject=Agency brief&body=${body}`;
+  location.href=`mailto:ian@gogentic.com?subject=Agency brief — GoGentic&body=${body}`;
   return false;
 }
 </script>
-<footer>© 2026 GoGentic · Dallas, TX · Ian Greenberg, AI Researcher (SMU)</footer>
+
 </body></html>

@@ -2,44 +2,92 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — GoGentic</title>
-<style>
-:root{--ink:#0e1420;--accent:#2b6cf6;--muted:#5b6b7f}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:ui-sans-serif,system-ui,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.7}
-.wrap{max-width:760px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid #e8edf3}.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:20px}.logo span{color:var(--accent)}
-nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:15px}
-.cta{background:var(--accent);color:#fff!important;padding:9px 18px;border-radius:8px;font-weight:600}
-h1{font-size:36px;letter-spacing:-1px;padding:56px 0 16px}
-p{color:#33414f;margin-bottom:18px;font-size:16.5px}
-b{color:var(--ink)}
-ul{margin:0 0 18px 22px;color:#33414f}
-footer{border-top:1px solid #e8edf3;padding:28px 0;color:var(--muted);font-size:14px;margin-top:40px}
-</style></head><body>
-<header><div class="wrap nav"><div class="logo">Go<span>Gentic</span></div>
-<nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="ratecard.html">Rate Card</a><a class="cta" href="contact.html">Book a Call</a></nav></div></header>
+<title>Studio — GoGentic</title>
+<meta name="description" content="GoGentic is an AI implementation studio for agencies, operated by Ian Greenberg, AI researcher at SMU.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+
+<header><div class="nav">
+  <a class="logo" href="index.html">Go<em>gentic</em></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="ratecard.html">Rate Card</a>
+    <a class="pill" href="contact.html">Start a pilot</a>
+  </nav>
+</div></header>
+
 <div class="wrap">
-<h1>About</h1>
-<p><b>GoGentic is an AI implementation studio for agencies.</b> We build the systems
-agencies want to sell — AI receptionists, booking automation, custom agent workflows —
-and deliver them white-label under your brand.</p>
-<p>The company is run by <b>Ian Greenberg, an AI researcher at SMU</b> (Southern Methodist
-University, Dallas). Ian builds and operates production AI agent systems daily: autonomous
-browsing agents, voice agents, data pipelines processing hundreds of thousands of records,
-and the infrastructure that makes businesses operable by AI.</p>
-<p><b>Why that matters to your agency:</b> most "AI consultants" are reselling wrappers.
-We're the people who build the wrappers' insides. The same systems we deploy for clients
-run our own company's operations — prospecting, outreach, scheduling — so everything we
-sell is proven on ourselves first.</p>
-<p><b>How we work:</b></p>
-<ul>
-<li>Fixed scope, fixed price, defined timeline — no hourly soup</li>
-<li>Paid pilot first, so you're never betting on slideware</li>
-<li>We're invisible: your client, your brand, your margin</li>
-<li>Dallas-based, working with agencies anywhere in the US</li>
-</ul>
+
+<div class="page-hero">
+  <div class="label" style="margin-bottom:24px">The studio</div>
+  <h1>Built by people who <em>run what they sell.</em></h1>
 </div>
-<footer>© 2026 GoGentic · Dallas, TX · Ian Greenberg, AI Researcher (SMU)</footer>
+
+<section>
+  <div class="about-strip" style="gap:64px">
+    <div>
+      <p class="lede" style="font-size:18px">GoGentic is an AI implementation studio
+      for agencies. We build the systems agencies want to sell — AI receptionists,
+      booking agents, custom workflows — and deliver them white-label under your
+      brand.</p>
+      <p class="lede" style="font-size:18px;margin-top:20px">The studio is operated by
+      <b style="color:var(--ink)">Ian Greenberg, an AI researcher at SMU</b> (Southern
+      Methodist University, Dallas). Ian builds and operates production AI agent
+      systems daily: autonomous browsing agents, voice agents, data pipelines
+      processing hundreds of thousands of records, and the agent infrastructure that
+      makes a business operable by AI.</p>
+      <p class="lede" style="font-size:18px;margin-top:20px">Most "AI consultants" are
+      reselling wrappers. We're the people who build the wrappers' insides — and the
+      same systems we deploy for clients run our own company's operations every day.
+      Nothing we sell is untested on ourselves first.</p>
+    </div>
+    <div>
+      <div class="fact">
+        <div class="f-label">Operator</div>
+        <p>Ian Greenberg — AI researcher, Southern Methodist University, Dallas, TX.</p>
+      </div>
+      <div class="fact">
+        <div class="f-label">In production daily</div>
+        <p>Autonomous browsing agents · voice agents · data pipelines over 128K+
+        business records · agent infrastructure and guardrails in live use.</p>
+      </div>
+      <div class="fact">
+        <div class="f-label">How we work</div>
+        <p>Fixed scope, fixed price, defined timeline — no hourly soup. Paid pilot
+        first, so you're never betting on slideware.</p>
+      </div>
+      <div class="fact">
+        <div class="f-label">Where</div>
+        <p>Dallas-based, working with agencies anywhere in the US.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <section style="padding:72px 0">
+    <div class="band-grid">
+      <h2 class="display" style="font-size:clamp(30px,3.6vw,44px)">The fastest way to
+      know if we're real: <em>watch us build.</em></h2>
+      <div>
+        <p>Every pilot engagement ends with a working system you can demo to your
+        client — not a report about AI.</p>
+        <a class="btn btn-primary" href="contact.html" style="margin-top:24px">Start with the pilot</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+</div>
+
+<footer><div class="wrap foot">
+  <div>© 2026 GoGentic · Dallas, TX</div>
+  <div>ian@gogentic.com</div>
+  <div>Ian Greenberg · AI Researcher, SMU</div>
+</div></footer>
+
 </body></html>
